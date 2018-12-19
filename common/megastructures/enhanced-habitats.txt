@@ -1,6 +1,6 @@
 # see README.txt for example
 
-staggered_habitat = {
+mining_habitat = {
 	entity = ""
 	construction_entity = "orbital_habitat_entity"
 	portrait = "GFX_megastructure_construction_background"
@@ -65,13 +65,46 @@ staggered_habitat = {
 				has_orbital_station = no
 			}
 
- 			# balance for habitats
+ 			
 			custom_tooltip = {
-				fail_text = "requires_not_minor_planetary_body"
+				fail_text = "requires_asteroid_or_star"
 				NOR = {
-					is_moon = yes
+					is_asteroid = no
+					is_star = no
 				}
-            }
+			}
+			
+			# custom_tooltip = {
+			# 	fail_text = "requires_star_with_energy"
+			# 	is_star = yes
+			# 	NOR = {
+			# 		has_deposit = d_energy_1
+			# 		has_deposit = d_energy_2
+			# 		has_deposit = d_energy_3
+			# 		has_deposit = d_energy_4
+			# 		has_deposit = d_energy_5
+			# 		has_deposit = d_energy_6
+			# 		has_deposit = d_energy_7
+			# 		has_deposit = d_energy_8
+			# 		has_deposit = d_energy_9
+			# 	}
+			# }
+			
+			# custom_tooltip = {
+			# 	fail_text = "requires_asteroid_with_minerals"
+			# 	is_asteroid = yes
+			# 	NOR = {
+			# 		has_deposit = d_minerals_1
+			# 		has_deposit = d_minerals_2
+			# 		has_deposit = d_minerals_3
+			# 		has_deposit = d_minerals_4
+			# 		has_deposit = d_minerals_5
+			# 		has_deposit = d_minerals_6
+			# 		has_deposit = d_minerals_7
+			# 		has_deposit = d_minerals_8
+			# 		has_deposit = d_minerals_9
+			# 	}
+            # }
             
             custom_tooltip = {
 				fail_text = "requires_not_black_hole"
@@ -197,6 +230,67 @@ staggered_habitat = {
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
+                }
+				if = {
+                    limit = {                        
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_1
+                            is_asteroid = yes
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_2
+                            is_asteroid = yes
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_3
+                            is_asteroid = yes
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_4
+                            is_asteroid = yes
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            OR = {
+                                has_deposit = d_minerals_5
+                                has_deposit = d_minerals_6
+                                has_deposit = d_minerals_7
+                                has_deposit = d_minerals_8
+                                has_deposit = d_minerals_9
+                            }
+                            is_asteroid = yes                         
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
                 }
                 set_planet_flag = megastructure
 				set_planet_flag = habitat

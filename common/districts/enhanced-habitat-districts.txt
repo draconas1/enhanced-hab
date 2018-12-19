@@ -7,13 +7,13 @@ district_hab_solar = {
 	show_on_uncolonized = {
 		is_planet_class = pc_habitat
 		from = { is_gestalt = no }
-        has_deposit = enhanced_hab_d_solar
+        has_deposit = d_enhanced_hab_near_solar
 	}
 	
 	potential = {
 		is_planet_class = pc_habitat
 		from = { is_gestalt = no }
-        has_deposit = enhanced_hab_d_solar
+        has_deposit = d_enhanced_hab_near_solar
 	}
 	
 	resources = {
@@ -117,6 +117,184 @@ district_hab_solar = {
 		}
 	}
 }
+
+district_asteroid_mining = {
+	base_buildtime = 240
+	
+	is_capped_by_modifier = yes
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+        has_deposit = d_enhanced_hab_asteroid_surface
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+        has_deposit = d_enhanced_hab_asteroid_surface
+	}
+	
+	allow = {
+		NOT = { has_modifier = resort_colony }
+	}
+	
+	conversion_ratio = 1
+	convert_to = {
+		district_mining_uncapped
+	}	
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+	
+	planet_modifier = {
+		planet_housing_add = 2
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				has_valid_civic = civic_agrarian_idyll
+			}
+		}
+		modifier = {
+			planet_housing_add = 1
+		}
+	}		
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_hive_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 3
+		}
+	}
+	
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_machine_empire = yes }
+		}
+		modifier = {
+			job_mining_drone_add = 2
+		}
+	}	
+		
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_miner_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_mine_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_gestalt = yes }
+		}
+		text = job_mining_drone_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_miner_effect_desc
+	}
+
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_mine_effect_desc
+	}
+	
+	prerequisites = {
+		tech_mechanized_mining
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = 
+		{
+			factor = 3
+			owner = { 
+				has_monthly_income = {
+					resource = minerals
+					value < 0
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			free_housing < 0
+		}
+
+		modifier = {
+			factor = 3
+			any_owned_pop = { 
+				OR = { 
+					is_unemployed = yes 
+					has_job = servant 
+				}
+			}
+		}
+
+		# No one to work it anyway
+		modifier = {
+			factor = 0
+			free_housing > 0
+			NOT = {
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		minerals = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+
 
 district_hab_cultural = {
 	base_buildtime = 240

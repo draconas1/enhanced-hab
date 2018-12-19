@@ -2,11 +2,14 @@
 
  ### Staggered Habitat text 
  requires_not_black_hole:0 "Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
+ requires_star_with_energy:0 "A §Y$mining_habitat$§! can only be built around stars with energy deposits"
+ requires_asteroid_with_minerals:0 "This asteroid field does not have enough minerals to support a §Y$mining_habitat$§!"
+ requires_asteroid_or_star:0 "A §Y$mining_habitat$§! can only be built around stars or asteroids"
  
- staggered_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$staggered_habitat$§! is a theoretically self-sustaining space station designed to be expanded as the population grows"
- staggered_habitat_CONSTRUCTION_INFO_DELAYED:2 "A Modular Habitat starts with only a single district."
- staggered_habitat:0 "Modular Habitat"
- staggered_habitat_DESC:0 "A Habitation Station orbiting an uninhabitable planet, capable of housing a number of §HPops§! and §HBuildings§! away from the surface."
+ mining_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$mining_habitat$§! is a self-sustaining space station designed for resource extraction"
+ mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "A §Y$mining_habitat$§! is built around a star or asteroid field with resources"
+ mining_habitat:0 "Mining Habitat"
+ mining_habitat_DESC:0 "A Habitation Station orbiting a star or asteroid field capable of housing a number of §HPops§! and §HBuildings§! away from the surface while allowing for resource exploitation."
 
  d_enhanced_hab_near_solar:0 "Near Solar Section"
  d_enhanced_hab_near_solar_desc:0 "Section of the habitat built close enough to the star to allow efficient solar collection"
