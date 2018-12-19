@@ -1,0 +1,182 @@
+@hab_cost = 500
+@hab_maintenance = 2
+district_hab_solar = {
+	base_buildtime = 240
+	is_capped_by_modifier = yes
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+        has_deposit = enhanced_hab_d_solar
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+        has_deposit = enhanced_hab_d_solar
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+				
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		modifier = {
+			job_technician_add = 2
+		}
+	}
+
+	triggered_planet_modifier = {
+		potential = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		modifier = {
+			job_fe_acolyte_generator_add = 2
+		}
+	}
+	
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { 
+				is_gestalt = no
+				is_fallen_empire_spiritualist = no
+			}
+		}
+		text = job_technician_effect_desc
+	}
+	triggered_desc = {
+		trigger = {
+			exists = owner
+			owner = { is_fallen_empire_spiritualist = yes }
+		}
+		text = job_fe_acolyte_generator_effect_desc
+	}
+	
+	ai_weight = {
+		weight = 1
+		modifier = 
+		{
+			factor = 3
+			owner = { 
+				has_monthly_income = {
+					resource = energy
+					value < 8
+				}
+			}
+		}
+
+		modifier = {
+			factor = 2
+			free_housing < 0
+		}
+
+		modifier = {
+			factor = 3
+			any_owned_pop = { 
+				OR = { 
+					is_unemployed = yes 
+					has_job = servant 
+				}
+			}
+		}
+
+		# No one to work it anyway
+		modifier = {
+			factor = 0
+			free_housing > 0
+			NOT = {
+				any_owned_pop = { 
+					OR = { 
+						is_unemployed = yes 
+						has_job = servant 
+					}
+				}
+			}
+		}
+	}
+
+	ai_resource_production = {
+		energy = 1
+		trigger = {
+			always = yes
+		}
+	}
+}
+
+district_hab_cultural = {
+	base_buildtime = 240
+	is_capped_by_modifier = no
+	
+	show_on_uncolonized = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+		NOR = {
+			has_deposit = enhanced_hab_d_solar
+			has_deposit = d_enhanced_hab_asteroid_surface
+        }
+	}
+	
+	potential = {
+		is_planet_class = pc_habitat
+		from = { is_gestalt = no }
+		NOR = {
+			has_deposit = enhanced_hab_d_solar
+			has_deposit = d_enhanced_hab_asteroid_surface
+        }
+	}
+	
+	resources = {
+		category = planet_districts
+		cost = {
+			minerals = @hab_cost
+		}
+		upkeep = {
+			energy = @hab_maintenance
+		}		
+	}
+		
+	planet_modifier = {
+		job_entertainer_add = 2
+		job_culture_worker_add = 1
+	}
+	
+	triggered_desc = {
+		text = job_entertainer_effect_desc
+	}	
+	
+	triggered_desc = {
+		text = job_culture_worker_effect_desc
+	}	
+	
+	ai_weight = {
+		weight = 1
+
+		modifier = 
+		{
+			factor = 3
+			free_amenities < 2
+		}
+	}
+
+	ai_resource_production = {
+		unity = 1
+		trigger = {
+			always = yes
+		}
+	}
+}

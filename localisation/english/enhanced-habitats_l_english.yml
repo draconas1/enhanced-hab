@@ -1,0 +1,16 @@
+﻿l_english:
+
+ ### Staggered Habitat text 
+ requires_not_black_hole:0 "Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
+ 
+ staggered_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$staggered_habitat$§! is a theoretically self-sustaining space station designed to be expanded as the population grows"
+ staggered_habitat_CONSTRUCTION_INFO_DELAYED:2 "A Modular Habitat starts with only a single district."
+ staggered_habitat:0 "Modular Habitat"
+ staggered_habitat_DESC:0 "A Habitation Station orbiting an uninhabitable planet, capable of housing a number of §HPops§! and §HBuildings§! away from the surface."
+
+ d_enhanced_hab_near_solar:0 "Near Solar Section"
+ d_enhanced_hab_near_solar_desc:0 "Section of the habitat built close enough to the star to allow efficient solar collection"
+ 
+ d_enhanced_hab_asteroid_surface:0 "Asteroid Surface Section"
+ d_enhanced_hab_asteroid_surface_desc:0 "Portions of this asteroid field are suitable for mining operations"
+ 

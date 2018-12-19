@@ -1,0 +1,30 @@
+d_enhanced_hab_near_solar = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_energy
+	
+	planet_modifier = { 
+		district_hab_energy_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
+d_enhanced_hab_asteroid_surface = {
+	is_for_colonizeable = yes
+	use_for_min_max_adjustments = yes
+	
+	category = deposit_cat_rare
+	
+	planet_modifier = { 
+		district_hab_energy_max = 1
+	}
+	
+	drop_weight = {
+		weight = 0
+	}
+}
+
