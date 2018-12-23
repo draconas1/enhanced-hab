@@ -1,0 +1,28 @@
+has_energy_deposit = {
+    OR = {
+        has_deposit = d_energy_1
+        has_deposit = d_energy_2
+        has_deposit = d_energy_3
+        has_deposit = d_energy_4
+        has_deposit = d_energy_5
+        has_deposit = d_energy_6
+        has_deposit = d_energy_7
+        has_deposit = d_energy_8
+        has_deposit = d_energy_9
+	}
+}
+
+
+has_minerals_deposit = {
+    OR = {
+        has_deposit = d_minerals_1
+        has_deposit = d_minerals_2
+        has_deposit = d_minerals_3
+        has_deposit = d_minerals_4
+        has_deposit = d_minerals_5
+        has_deposit = d_minerals_6
+        has_deposit = d_minerals_7
+        has_deposit = d_minerals_8
+        has_deposit = d_minerals_9
+    }
+}

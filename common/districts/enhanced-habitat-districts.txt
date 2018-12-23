@@ -1,6 +1,6 @@
 @hab_cost = 500
 @hab_maintenance = 2
-district_hab_solar = {
+district_enhanced_hab_hab_solar = {
 	base_buildtime = 240
 	is_capped_by_modifier = yes
 	
@@ -12,7 +12,7 @@ district_hab_solar = {
 	
 	potential = {
 		is_planet_class = pc_habitat
-		from = { is_gestalt = no }
+		owner = { is_gestalt = no }	
         has_deposit = d_enhanced_hab_near_solar
 	}
 	
@@ -118,9 +118,8 @@ district_hab_solar = {
 	}
 }
 
-district_asteroid_mining = {
-	base_buildtime = 240
-	
+district_enhanced_hab_asteroid_mining = {
+	base_buildtime = 240	
 	is_capped_by_modifier = yes
 	
 	show_on_uncolonized = {
@@ -130,20 +129,11 @@ district_asteroid_mining = {
 	}
 	
 	potential = {
-		is_planet_class = pc_habitat
-		from = { is_gestalt = no }
-        has_deposit = d_enhanced_hab_asteroid_surface
+		is_planet_class = pc_habitat		
+		owner = { is_gestalt = no }
+        has_deposit = d_enhanced_hab_asteroid_surface	
 	}
-	
-	allow = {
-		NOT = { has_modifier = resort_colony }
-	}
-	
-	conversion_ratio = 1
-	convert_to = {
-		district_mining_uncapped
-	}	
-	
+
 	resources = {
 		category = planet_districts
 		cost = {
@@ -153,23 +143,7 @@ district_asteroid_mining = {
 			energy = @hab_maintenance
 		}		
 	}
-	
-	planet_modifier = {
-		planet_housing_add = 2
-	}
-	
-	triggered_planet_modifier = {
-		potential = {
-			exists = owner
-			owner = { 
-				has_valid_civic = civic_agrarian_idyll
-			}
-		}
-		modifier = {
-			planet_housing_add = 1
-		}
-	}		
-		
+			
 	triggered_planet_modifier = {
 		potential = {
 			exists = owner
@@ -238,11 +212,7 @@ district_asteroid_mining = {
 		}
 		text = job_fe_acolyte_mine_effect_desc
 	}
-	
-	prerequisites = {
-		tech_mechanized_mining
-	}
-	
+		
 	ai_weight = {
 		weight = 1
 		modifier = 
@@ -304,16 +274,16 @@ district_hab_cultural = {
 		is_planet_class = pc_habitat
 		from = { is_gestalt = no }
 		NOR = {
-			has_deposit = enhanced_hab_d_solar
+			has_deposit = d_enhanced_hab_near_solar
 			has_deposit = d_enhanced_hab_asteroid_surface
         }
 	}
 	
 	potential = {
 		is_planet_class = pc_habitat
-		from = { is_gestalt = no }
+		owner = { is_gestalt = no }
 		NOR = {
-			has_deposit = enhanced_hab_d_solar
+			has_deposit = d_enhanced_hab_near_solar
 			has_deposit = d_enhanced_hab_asteroid_surface
         }
 	}

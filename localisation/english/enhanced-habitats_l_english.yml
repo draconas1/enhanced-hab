@@ -2,14 +2,14 @@
 
  ### Staggered Habitat text 
  requires_not_black_hole:0 "Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
- requires_star_with_energy:0 "A §Y$mining_habitat$§! can only be built around stars with energy deposits"
- requires_asteroid_with_minerals:0 "This asteroid field does not have enough minerals to support a §Y$mining_habitat$§!"
- requires_asteroid_or_star:0 "A §Y$mining_habitat$§! can only be built around stars or asteroids"
+ requires_star_with_energy:0 "A §Y$enhanced_hab_mining_habitat$§! can only be built around stars with energy deposits"
+ requires_asteroid_with_minerals:0 "This asteroid field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
+ requires_asteroid_or_star:0 "A §Y$enhanced_hab_mining_habitat$§! can only be built around stars or asteroids"
  
- mining_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$mining_habitat$§! is a self-sustaining space station designed for resource extraction"
- mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "A §Y$mining_habitat$§! is built around a star or asteroid field with resources"
- mining_habitat:0 "Mining Habitat"
- mining_habitat_DESC:0 "A Habitation Station orbiting a star or asteroid field capable of housing a number of §HPops§! and §HBuildings§! away from the surface while allowing for resource exploitation."
+ enhanced_hab_mining_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$enhanced_hab_mining_habitat$§! is a self-sustaining space station designed for resource extraction"
+ enhanced_hab_mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "A §Y$enhanced_hab_mining_habitat$§! is built around a star or asteroid field with resources"
+ enhanced_hab_mining_habitat:0 "Mining Habitat"
+ enhanced_hab_mining_habitat_DESC:0 "A Habitation Station orbiting a star or asteroid field capable of housing a number of §HPops§! and §HBuildings§! away from the surface while allowing for resource exploitation."
 
  d_enhanced_hab_near_solar:0 "Near Solar Section"
  d_enhanced_hab_near_solar_desc:0 "Section of the habitat built close enough to the star to allow efficient solar collection"
@@ -17,3 +17,13 @@
  d_enhanced_hab_asteroid_surface:0 "Asteroid Surface Section"
  d_enhanced_hab_asteroid_surface_desc:0 "Portions of this asteroid field are suitable for mining operations"
  
+ district_enhanced_hab_asteroid_mining:0 "Asteroid Mining District"
+ district_enhanced_hab_asteroid_mining_plural:0 "Asteroid Mining Districts"
+ district_enhanced_hab_asteroid_mining_desc:0 "Sections of the habitat built directly on the most mineral rich asteroids allow the resources to be safely extracted"
+
+ district_enhanced_hab_hab_solar:0 "Solar Farm District"
+ district_enhanced_hab_hab_solar_plural:0 "Solar Farm Districts"
+ district_enhanced_hab_hab_solar_desc:0 "Built as close to the star as our technology allows, these solar panels generate an enormous amount of enrgy credits"
+
+ mod_district_enhanced_hab_hab_solar_max:0 "§Y$district_enhanced_hab_hab_solar$§!"
+ mod_district_enhanced_hab_asteroid_mining_max:0 "§Y$district_enhanced_hab_asteroid_mining$§!"

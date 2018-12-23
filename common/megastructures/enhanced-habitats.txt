@@ -1,6 +1,4 @@
-# see README.txt for example
-
-mining_habitat = {
+enhanced_hab_mining_habitat = {
 	entity = ""
 	construction_entity = "orbital_habitat_entity"
 	portrait = "GFX_megastructure_construction_background"
@@ -11,14 +9,19 @@ mining_habitat = {
 	resources = {
 		category = megastructures
 		cost = {
-			alloys = 3
-			influence = 2
+			alloys = 3000
+			influence = 200
 		}
 	}
 	construction_blocks_others = no
     
-    prerequisites = {
-		"tech_starbase_1"
+    potential = {
+		OR = {
+			has_ascension_perk = ap_voidborn
+			has_civic = civic_diadochi
+			has_civic = civic_great_khans_legacy
+			has_country_flag = democratic_khanate_flag
+		}
 	}
 
 	possible = {
@@ -65,48 +68,37 @@ mining_habitat = {
 				has_orbital_station = no
 			}
 
- 			
+ 			# mining habitats can only be built around stars or asteroid fields.
 			custom_tooltip = {
 				fail_text = "requires_asteroid_or_star"
-				NOR = {
-					is_asteroid = no
-					is_star = no
+				OR = {
+					is_asteroid = yes
+					is_star = yes
 				}
 			}
 			
-			# custom_tooltip = {
-			# 	fail_text = "requires_star_with_energy"
-			# 	is_star = yes
-			# 	NOR = {
-			# 		has_deposit = d_energy_1
-			# 		has_deposit = d_energy_2
-			# 		has_deposit = d_energy_3
-			# 		has_deposit = d_energy_4
-			# 		has_deposit = d_energy_5
-			# 		has_deposit = d_energy_6
-			# 		has_deposit = d_energy_7
-			# 		has_deposit = d_energy_8
-			# 		has_deposit = d_energy_9
-			# 	}
-			# }
+			# either its not a star
+			# or if it is a star, it requires an energy deposit
+			custom_tooltip = {
+				fail_text = "requires_star_with_energy"
+				OR = {
+					is_star = no
+					has_energy_deposit = yes
+				}
+			}
 			
-			# custom_tooltip = {
-			# 	fail_text = "requires_asteroid_with_minerals"
-			# 	is_asteroid = yes
-			# 	NOR = {
-			# 		has_deposit = d_minerals_1
-			# 		has_deposit = d_minerals_2
-			# 		has_deposit = d_minerals_3
-			# 		has_deposit = d_minerals_4
-			# 		has_deposit = d_minerals_5
-			# 		has_deposit = d_minerals_6
-			# 		has_deposit = d_minerals_7
-			# 		has_deposit = d_minerals_8
-			# 		has_deposit = d_minerals_9
-			# 	}
-            # }
+			# either its not an asteroid
+			# or if it is an asteroid, it requires a minerals deposit
+			custom_tooltip = {
+				fail_text = "requires_asteroid_with_minerals"
+				OR = {
+					is_asteroid = no				
+					has_minerals_deposit = yes
+				}
+            }
             
-            custom_tooltip = {
+            # do not build habitats on black holes.  It's just not cool man!
+			custom_tooltip = {
 				fail_text = "requires_not_black_hole"
 				NOT = {
 					is_star_class = sc_black_hole
