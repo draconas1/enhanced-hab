@@ -27,3 +27,9 @@
 
  mod_district_enhanced_hab_hab_solar_max:0 "§Y$district_enhanced_hab_hab_solar$§!"
  mod_district_enhanced_hab_asteroid_mining_max:0 "§Y$district_enhanced_hab_asteroid_mining$§!"
+
+ enhanced_habitat_energy:0 "Near Solar Energy Collection"
+ enhanced_habitat_energy_desc:0 "We are so close to the star that the solar panels are much more efficient"
+
+ enhanced_habitat_minerals:0 "Asteroid Mineral Extraction"
+ enhanced_habitat_minerals_desc:0 "Mineral wealth is much easier to extract efficiently from asteroids"

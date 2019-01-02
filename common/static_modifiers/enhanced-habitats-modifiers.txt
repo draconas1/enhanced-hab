@@ -1,0 +1,12 @@
+# If you don't have voidborn, habitats are a bit crap.
+enhanced_habitat_minerals = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_mineral_rich.dds"
+    icon_frame = 1
+    planet_miners_minerals_produces_mult = 0.25
+}
+
+enhanced_habitat_energy = {
+	icon = "gfx/interface/icons/planet_modifiers/pm_star.dds"
+    icon_frame = 1
+    planet_technician_energy_produces_mult = 0.25
+}

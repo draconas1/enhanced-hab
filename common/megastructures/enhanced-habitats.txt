@@ -169,7 +169,11 @@ enhanced_hab_mining_habitat = {
                             is_star = yes
                         }
                     }
-                    add_deposit = d_enhanced_hab_near_solar
+					add_deposit = d_enhanced_hab_near_solar
+					add_modifier = {
+						modifier = enhanced_habitat_energy
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -179,7 +183,11 @@ enhanced_hab_mining_habitat = {
                         }
                     }
                     add_deposit = d_enhanced_hab_near_solar
-                    add_deposit = d_enhanced_hab_near_solar
+					add_deposit = d_enhanced_hab_near_solar
+					add_modifier = {
+						modifier = enhanced_habitat_energy
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -190,7 +198,11 @@ enhanced_hab_mining_habitat = {
                     }
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
-                    add_deposit = d_enhanced_hab_near_solar
+					add_deposit = d_enhanced_hab_near_solar
+					add_modifier = {
+						modifier = enhanced_habitat_energy
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -202,7 +214,11 @@ enhanced_hab_mining_habitat = {
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
-                    add_deposit = d_enhanced_hab_near_solar
+					add_deposit = d_enhanced_hab_near_solar
+					add_modifier = {
+						modifier = enhanced_habitat_energy
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -221,7 +237,11 @@ enhanced_hab_mining_habitat = {
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
                     add_deposit = d_enhanced_hab_near_solar
-                    add_deposit = d_enhanced_hab_near_solar
+					add_deposit = d_enhanced_hab_near_solar
+					add_modifier = {
+						modifier = enhanced_habitat_energy
+						days = -1
+					}
                 }
 				if = {
                     limit = {                        
@@ -230,7 +250,11 @@ enhanced_hab_mining_habitat = {
                             is_asteroid = yes
                         }
                     }
-                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_minerals
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -240,7 +264,11 @@ enhanced_hab_mining_habitat = {
                         }
                     }
                     add_deposit = d_enhanced_hab_asteroid_surface
-                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_minerals
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -251,7 +279,11 @@ enhanced_hab_mining_habitat = {
                     }
                     add_deposit = d_enhanced_hab_asteroid_surface
                     add_deposit = d_enhanced_hab_asteroid_surface
-                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_minerals
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -263,7 +295,11 @@ enhanced_hab_mining_habitat = {
                     add_deposit = d_enhanced_hab_asteroid_surface
                     add_deposit = d_enhanced_hab_asteroid_surface
                     add_deposit = d_enhanced_hab_asteroid_surface
-                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_minerals
+						days = -1
+					}
                 }
                 if = {
                     limit = {
@@ -282,7 +318,11 @@ enhanced_hab_mining_habitat = {
                     add_deposit = d_enhanced_hab_asteroid_surface
                     add_deposit = d_enhanced_hab_asteroid_surface
                     add_deposit = d_enhanced_hab_asteroid_surface
-                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_minerals
+						days = -1
+					}
                 }
                 set_planet_flag = megastructure
 				set_planet_flag = habitat
