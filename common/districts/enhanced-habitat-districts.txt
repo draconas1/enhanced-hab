@@ -124,13 +124,11 @@ district_enhanced_hab_asteroid_mining = {
 	
 	show_on_uncolonized = {
 		is_planet_class = pc_habitat
-		from = { is_gestalt = no }
         has_deposit = d_enhanced_hab_asteroid_surface
 	}
 	
 	potential = {
-		is_planet_class = pc_habitat		
-		owner = { is_gestalt = no }
+		is_planet_class = pc_habitat
         has_deposit = d_enhanced_hab_asteroid_surface	
 	}
 

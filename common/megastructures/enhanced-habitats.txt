@@ -4,7 +4,7 @@ enhanced_hab_mining_habitat = {
 	portrait = "GFX_megastructure_construction_background"
 	place_entity_on_planet_plane = yes
 	entity_offset = { x = -7 y = -7 }
-	build_time = 1
+	build_time = 1800
 
 	resources = {
 		category = megastructures
