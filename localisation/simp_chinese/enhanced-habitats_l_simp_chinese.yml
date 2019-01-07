@@ -1,0 +1,35 @@
+l_simp_chinese:
+
+ ### Staggered Habitat text 
+ requires_not_black_hole:0 "轨道栖所不能被建造在黑洞周围，没人想时常注视着深渊。"
+ requires_star_with_energy:0 "§Y$enhanced_hab_mining_habitat$§!只能被建造在有能量矿藏的星体周围。
+ requires_asteroid_with_minerals:0 "这个小行星群没有足够的矿物矿藏以支持§Y$enhanced_hab_mining_habitat$§!"
+ requires_asteroid_or_star:0 "§Y$enhanced_hab_mining_habitat$§!只能被建造在星体或小行星周围。"
+ 
+ enhanced_hab_mining_habitat_MEGASTRUCTURE_DETAILS:1 "§Y$enhanced_hab_mining_habitat$§!是用于提取资源的自我维持的空间站。"
+ enhanced_hab_mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "§Y$enhanced_hab_mining_habitat$§!被建造在具有资源的星体或小行星群周围。"
+ enhanced_hab_mining_habitat:0 "采矿轨道栖所"
+ enhanced_hab_mining_habitat_DESC:0 "环绕着星体或小行星群的轨道基地，他能在远离星球表面的地方支持一定数量的§H人口§!和§H建筑§!并可以进行资源提取。"
+
+ d_enhanced_hab_near_solar:0 "近星区块"
+ d_enhanced_hab_near_solar_desc:0 "离星体足够近的轨道栖所区块，可以有效地采集光照能量。"
+ 
+ d_enhanced_hab_asteroid_surface:0 "小行星表面区块"
+ d_enhanced_hab_asteroid_surface_desc:0 "该小行星的一部分适用于采矿作业。"
+ 
+ district_enhanced_hab_asteroid_mining:0 "小行星采矿区"
+ district_enhanced_hab_asteroid_mining_plural:0 "小行星采矿区"
+ district_enhanced_hab_asteroid_mining_desc:0 "直接建造在富含矿物质的小行星上的栖所区块，可以安全地提取资源。"
+
+ district_enhanced_hab_hab_solar:0 "光能发电区"
+ district_enhanced_hab_hab_solar_plural:0 "光能发电区"
+ district_enhanced_hab_hab_solar_desc:0 "由于建造在我们技术允许的和星体的最近距离上，这些光能电池板可以产生大量的能量。"
+
+ mod_district_enhanced_hab_hab_solar_max:0 "§Y$district_enhanced_hab_hab_solar$§!"
+ mod_district_enhanced_hab_asteroid_mining_max:0 "§Y$district_enhanced_hab_asteroid_mining$§!"
+
+ enhanced_habitat_energy:0 "近星能量采集"
+ enhanced_habitat_energy_desc:0 "我们离星体足够近，光能电池板现在十分地有效率。"
+
+ enhanced_habitat_minerals:0 "小行星矿物提取"
+ enhanced_habitat_minerals_desc:0 "从小行星中提取矿物更有效率。"
