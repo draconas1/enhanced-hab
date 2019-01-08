@@ -1,6 +1,6 @@
-l_simp_chinese:
+﻿l_simp_chinese:
 
- ### Staggered Habitat text 
+ ### Enhanced Habitat text 
  requires_not_black_hole:0 "轨道栖所不能被建造在黑洞周围，没人想时常注视着深渊。"
  requires_star_with_energy:0 "§Y$enhanced_hab_mining_habitat$§!只能被建造在有能量矿藏的星体周围。
  requires_asteroid_with_minerals:0 "这个小行星群没有足够的矿物矿藏以支持§Y$enhanced_hab_mining_habitat$§!"
