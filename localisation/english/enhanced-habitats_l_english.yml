@@ -1,10 +1,10 @@
 ﻿l_english:
 
  ### Enhanced Habitat text 
- requires_not_black_hole:0 "Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
- requires_star_with_energy:0 "A §Y$enhanced_hab_mining_habitat$§! can only be built around stars with energy deposits"
- requires_asteroid_with_minerals:0 "This asteroid field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
- requires_asteroid_or_star:0 "A §Y$enhanced_hab_mining_habitat$§! can only be built around stars or asteroids"
+ requires_not_black_hole:0 "$TRIGGER_FAIL$Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
+ requires_star_with_energy:0 "$TRIGGER_FAIL$A §Y$enhanced_hab_mining_habitat$§! can only be built around stars with energy deposits"
+ requires_asteroid_with_minerals:0 "$TRIGGER_FAIL$This asteroid field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
+ requires_asteroid_or_star:0 "$TRIGGER_FAIL$A §Y$enhanced_hab_mining_habitat$§! can only be built around stars or asteroids"
  
  enhanced_hab_mining_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$enhanced_hab_mining_habitat$§! is a self-sustaining space station designed for resource extraction"
  enhanced_hab_mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "A §Y$enhanced_hab_mining_habitat$§! is built around a star or asteroid field with resources"
