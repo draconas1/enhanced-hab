@@ -4,6 +4,7 @@
  requires_not_black_hole:0 "$TRIGGER_FAIL$轨道栖所不能被建造在黑洞周围，没人想时常注视着深渊。"
  requires_star_with_energy:0 "$TRIGGER_FAIL$§Y$enhanced_hab_mining_habitat$§!只能被建造在有能量矿藏的恒星周围。
  requires_asteroid_with_minerals:0 "$TRIGGER_FAIL$这个小行星群没有足够的矿物矿藏以支持§Y$enhanced_hab_mining_habitat$§!"
+ requires_planet_with_minerals:0 "$TRIGGER_FAIL$This planet field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
  requires_asteroid_or_star:0 "$TRIGGER_FAIL$§Y$enhanced_hab_mining_habitat$§!只能被建造在恒星或小行星周围。"
  
  enhanced_hab_mining_habitat_MEGASTRUCTURE_DETAILS:1 "§Y$enhanced_hab_mining_habitat$§!是用于提取资源的自我维持的空间站。"
@@ -33,3 +34,6 @@
 
  enhanced_habitat_minerals:0 "小行星矿物提取"
  enhanced_habitat_minerals_desc:0 "从小行星中提取矿物更有效率。"
+
+ enhanced_habitat_planet_minerals:0 "Planet Mineral Extraction"
+ enhanced_habitat_planet_minerals_desc:0 "Exploiting the planets mineral wealth and lifting it out of the gravity field is an inefficient proccess compared with asteroid mining"

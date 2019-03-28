@@ -15,14 +15,7 @@ enhanced_hab_mining_habitat = {
 	}
 	construction_blocks_others = no
     
-    potential = {
-		OR = {
-			has_ascension_perk = ap_voidborn
-			has_civic = civic_diadochi
-			has_civic = civic_great_khans_legacy
-			has_country_flag = democratic_khanate_flag
-		}
-	}
+  
 
 	possible = {
 		exists = starbase
@@ -74,6 +67,14 @@ enhanced_hab_mining_habitat = {
 				OR = {
 					is_asteroid = yes
 					is_star = yes
+					
+					is_planet_class = pc_molten
+					is_planet_class = pc_toxic
+					is_planet_class = pc_frozen
+					is_planet_class = pc_barren
+					is_planet_class = pc_barren_cold
+					is_planet_class = pc_broken
+					is_planet_class = pc_shattered
 				}
 			}
 			
@@ -93,6 +94,24 @@ enhanced_hab_mining_habitat = {
 				fail_text = "requires_asteroid_with_minerals"
 				OR = {
 					is_asteroid = no				
+					has_minerals_deposit = yes
+				}
+			}
+			
+			# either its not an asteroid
+			# or if it is an asteroid, it requires a minerals deposit
+			custom_tooltip = {
+				fail_text = "requires_planet_with_minerals"
+				OR = {
+					NOR = {
+						is_planet_class = pc_molten
+						is_planet_class = pc_toxic
+						is_planet_class = pc_frozen
+						is_planet_class = pc_barren
+						is_planet_class = pc_barren_cold
+						is_planet_class = pc_broken
+						is_planet_class = pc_shattered
+					}				
 					has_minerals_deposit = yes
 				}
             }
@@ -323,7 +342,94 @@ enhanced_hab_mining_habitat = {
 						modifier = enhanced_habitat_minerals
 						days = -1
 					}
+				}
+
+
+				
+				if = {
+                    limit = {                        
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_1
+                            is_asteroid = no
+                        }
+                    }
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_planet_minerals
+						days = -1
+					}
                 }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_2
+                            is_asteroid = no
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_planet_minerals
+						days = -1
+					}
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_3
+                            is_asteroid = no
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_planet_minerals
+						days = -1
+					}
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            has_deposit = d_minerals_4
+                            is_asteroid = no
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_planet_minerals
+						days = -1
+					}
+                }
+                if = {
+                    limit = {
+                        fromfrom.planet = {
+                            OR = {
+                                has_deposit = d_minerals_5
+                                has_deposit = d_minerals_6
+                                has_deposit = d_minerals_7
+                                has_deposit = d_minerals_8
+                                has_deposit = d_minerals_9
+                            }
+                            is_asteroid = no                         
+                        }
+                    }
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+                    add_deposit = d_enhanced_hab_asteroid_surface
+					add_deposit = d_enhanced_hab_asteroid_surface
+					add_modifier = {
+						modifier = enhanced_habitat_planet_minerals
+						days = -1
+					}
+                }
+
+
+
                 set_planet_flag = megastructure
 				set_planet_flag = habitat
 			}

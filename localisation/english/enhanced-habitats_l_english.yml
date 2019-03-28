@@ -4,7 +4,8 @@
  requires_not_black_hole:0 "$TRIGGER_FAIL$Habitat cannot be built around a black hole, nobody wants to gaze into the abyss constantly"
  requires_star_with_energy:0 "$TRIGGER_FAIL$A §Y$enhanced_hab_mining_habitat$§! can only be built around stars with energy deposits"
  requires_asteroid_with_minerals:0 "$TRIGGER_FAIL$This asteroid field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
- requires_asteroid_or_star:0 "$TRIGGER_FAIL$A §Y$enhanced_hab_mining_habitat$§! can only be built around stars or asteroids"
+ requires_planet_with_minerals:0 "$TRIGGER_FAIL$This planet field does not have enough minerals to support a §Y$enhanced_hab_mining_habitat$§!"
+ requires_asteroid_or_star:0 "$TRIGGER_FAIL$A §Y$enhanced_hab_mining_habitat$§! can only be built around stars or asteroids or planets with mineral deposits"
  
  enhanced_hab_mining_habitat_MEGASTRUCTURE_DETAILS:1 "A §Y$enhanced_hab_mining_habitat$§! is a self-sustaining space station designed for resource extraction"
  enhanced_hab_mining_habitat_CONSTRUCTION_INFO_DELAYED:2 "A §Y$enhanced_hab_mining_habitat$§! is built around a star or asteroid field with resources"
@@ -17,9 +18,9 @@
  d_enhanced_hab_asteroid_surface:0 "Asteroid Surface Section"
  d_enhanced_hab_asteroid_surface_desc:0 "Portions of this asteroid field are suitable for mining operations"
  
- district_enhanced_hab_asteroid_mining:0 "Asteroid Mining District"
- district_enhanced_hab_asteroid_mining_plural:0 "Asteroid Mining Districts"
- district_enhanced_hab_asteroid_mining_desc:0 "Sections of the habitat built directly on the most mineral rich asteroids allow the resources to be safely extracted"
+ district_enhanced_hab_asteroid_mining:0 "Surface Mining District"
+ district_enhanced_hab_asteroid_mining_plural:0 "Surface Mining Districts"
+ district_enhanced_hab_asteroid_mining_desc:0 "Sections of the habitat built directly on the most mineral rich surface areas allow the resources to be safely extracted"
 
  district_enhanced_hab_hab_solar:0 "Solar Farm District"
  district_enhanced_hab_hab_solar_plural:0 "Solar Farm Districts"
@@ -33,3 +34,6 @@
 
  enhanced_habitat_minerals:0 "Asteroid Mineral Extraction"
  enhanced_habitat_minerals_desc:0 "Mineral wealth is much easier to extract efficiently from asteroids"
+
+ enhanced_habitat_planet_minerals:0 "Planet Mineral Extraction"
+ enhanced_habitat_planet_minerals_desc:0 "Exploiting the planets mineral wealth and lifting it out of the gravity field is an inefficient proccess compared with asteroid mining"
