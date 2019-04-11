@@ -15,7 +15,14 @@ enhanced_hab_mining_habitat = {
 	}
 	construction_blocks_others = no
     
-  
+    potential = {
+		OR = {
+			has_ascension_perk = ap_voidborn
+			has_civic = civic_diadochi
+			has_civic = civic_great_khans_legacy
+			has_country_flag = democratic_khanate_flag
+		}
+	}
 
 	possible = {
 		exists = starbase
